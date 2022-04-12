@@ -1,0 +1,11 @@
+---
+- name: say hello
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: say hello
+      shell: echo "hello world!"
+      register: hello
+    - name: debug
+      debug:
+        var: hello
